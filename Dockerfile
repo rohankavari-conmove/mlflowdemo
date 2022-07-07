@@ -1,5 +1,4 @@
-
-FROM python:3.8-alpine
+FROM python:3.10.5-alpine
 
 RUN apk update
 RUN apk add make automake gcc g++ subversion python3-dev musl-dev postgresql-dev nginx gettext apache2-utils
