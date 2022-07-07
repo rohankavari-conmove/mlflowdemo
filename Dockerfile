@@ -3,7 +3,7 @@ FROM python:3.10.5-alpine
 RUN apk update
 RUN apk add make automake gcc g++ subversion python3-dev musl-dev postgresql-dev nginx gettext apache2-utils
 
-RUN pip install mlflow
+RUN pip install mlflow --use-deprecated=backtrack-on-build-failures
 
 COPY run.sh run.sh
 RUN chmod u+x run.sh
